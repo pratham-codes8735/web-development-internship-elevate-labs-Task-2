@@ -1,0 +1,178 @@
+ @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Devanagari:wght@100..900&display=swap');
+ 
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100%;
+min-height: 100vh;
+padding: 0 20px;
+
+}
+ body{
+    font-family: "Jost", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb);
+    background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    color: antiquewhite;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.input-area input{
+
+    flex: 1;
+    padding: 10px 17px;
+    font-size: 1.1rem;
+    border: none;
+    outline: none;
+    border-radius: 22px;
+    background: rgba(255, 194, 209, 0.3);
+    color: #dbdbdb;
+}
+
+.input-area button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 50%;
+    color:rgb(193, 95, 9);
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.18) ;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+#task-list { list-style: none; width: 100%; }
+#task-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+}
+
+#task-list li button {
+  background: none;
+  border: none;
+  color: #ff8a65;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+
+#task-list li span {
+    cursor: pointer;
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+#task-list li span.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+    color: #d3ffd3;
+}
+
+
+/* Responsive */
+.todos-content {
+    width: 100%;
+}
+
+#task-list li {
+    gap: 12px;
+}
+
+/* Tablets and smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .todo-app {
+        max-width: 500px;
+        padding: 1.5rem;
+        gap: 24px;
+    }
+
+    .input-area input {
+        min-width: 0;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 14px;
+    }
+
+    .todo-app {
+        width: 100%;
+        padding: 1.2rem;
+        gap: 20px;
+        border-radius: 16px;
+    }
+
+    .todo-app h1 {
+        font-size: 1.7rem;
+    }
+
+    .input-area {
+        gap: 8px;
+    }
+
+    .input-area input {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+
+    .input-area button {
+        margin-left: 0;
+        min-width: 40px;
+        min-height: 40px;
+    }
+
+    #task-list li {
+        padding: 10px 12px;
+        font-size: 0.95rem;
+    }
+}
